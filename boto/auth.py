@@ -401,6 +401,7 @@ class HmacAuthV4Handler(AuthHandler, HmacKeys):
         case, sorting them in alphabetical order and then joining
         them into a string, separated by newlines.
         """
+        # heroku-boto-patch
         # first clean the headers
         clean = {}
         for header in headers_to_sign:

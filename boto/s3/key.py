@@ -986,6 +986,7 @@ class Key(object):
             # If you use customer-provided encryption keys, the ETag value that
             # Amazon S3 returns in the response will not be the MD5 of the
             # object.
+            # heroku-boto-patch
             server_side_encryption_customer_algorithm = response.getheader(
                 'x-amz-server-side-encryption-customer-algorithm', None)
             # check for kms headers, their ETag also doesn't match
