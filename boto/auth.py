@@ -792,7 +792,7 @@ class S3HmacAuthV4Handler(HmacAuthV4Handler, AuthHandler):
         headers_to_sign = self.headers_to_sign(req)
         l = sorted(['%s' % n.lower().strip() for n in headers_to_sign])
         params['X-Amz-SignedHeaders'] = ';'.join(l)
- 
+
         req.params.update(params)
 
         cr = self.canonical_request(req)
