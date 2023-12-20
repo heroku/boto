@@ -1,2 +1,2 @@
 idna==2.7
-paramiko>=1.10.0,<2.4
+paramiko>=3.4.0,<2.4
